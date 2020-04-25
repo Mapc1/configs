@@ -166,3 +166,5 @@ alias gpsh='git push'
 alias gpll='git pull'
 
 alias gsth='git stash'
+
+ulimit -c unlimited
