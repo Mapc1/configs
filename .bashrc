@@ -167,4 +167,6 @@ alias gpll='git pull'
 
 alias gsth='git stash'
 
+alias active_driver="glxinfo |egrep 'OpenGL vendor|OpenGL renderer'"
+
 ulimit -c unlimited

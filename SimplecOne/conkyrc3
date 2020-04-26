@@ -29,7 +29,7 @@ double_buffer yes
 no_buffers yes
 imlib_cache_size 10
 own_window true
-own_window_type normal
+own_window_type override
 own_window_hints undecorated,sticky,skip_taskbar,skip_pager,below
 own_window_colour 000000
 own_window_argb_visual yes
@@ -56,7 +56,7 @@ ${voffset 10}$color1
 ${goto 20}$color2${font LineAwesomeMod :size=14}M $font$color4 ${sysname} $color2${kernel}
 ${goto 20}$color2${font LineAwesomeMod :size=14}G $font$color4 Uptime $color2${uptime}
 ${goto 20}$color2${font LineAwesomeMod :size=14}Q $font$color4 Running Processes $color2${running_processes} / ${processes} 
-${goto 20}$color2${font LineAwesomeMod :size=14}D $font$color4 Desktop${if_match "$desktop"!="Not running in X"}(${desktop}/${desktop_number})${endif}: $color2${desktop_name}
+${goto 20}$color2${font LineAwesomeMod :size=14}D ${font}$color4 Desktop${if_match "$desktop"!="Not running in X"}$color2(${desktop}/${desktop_number})${endif}
 ${goto 20}$color2${font LineAwesomeMod :size=14}7 $font$color4 Threads: $color2${running_threads}
 
 ${goto 20}$color2${font LineAwesomeMod :size=14}= $font$color4 Local IP: $color2${addr enp6s0f1}

@@ -19,7 +19,6 @@ color1 f739e7
 color2 ff7c17
 #Graph Color
 #color3 BFBFBF
-color3 c139f7
 #Data Color
 color4 e3e3e3
 
@@ -28,7 +27,7 @@ double_buffer yes
 no_buffers yes
 imlib_cache_size 10
 own_window true
-own_window_type normal
+own_window_type override
 own_window_hints undecorated,sticky,skip_taskbar,skip_pager,below
 own_window_colour 000000
 own_window_argb_visual yes
@@ -59,5 +58,5 @@ ${alignr 30}$color1${diskiograph 30,270 -l}$color
 ${goto 30}$color2${font LineAwesomeMod :size=14}p$color4 $font Load Average(1min) ${alignr 30}$color2${loadavg 1}
 ${alignr 30}$color1${loadgraph 30,270 -l}$color
 ${goto 30}$color2${font LineAwesomeMod :size=14}-$color4 $font Memory ${alignr 30}$color2${mem} - ${memperc}%
-${alignr 30}$color3${memgraph 30,270 -l}$color1
+${alignr 30}$color1${memgraph 30,270 -l}$color1
 
