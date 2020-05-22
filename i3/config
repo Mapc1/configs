@@ -11,16 +11,21 @@ floating_modifier $super
 #autostart
 exec --no-startup-id xsettingsd &
 exec --no-startup-id compton -fb
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpeg
+exec_always --no-startup-id feh --bg-scale ~/Pictures/merda.jpg
 exec --no-startup-id .conky/SimplecOne/start.sh
 exec --no-startup-id spotify
 exec --no-startup-id ~/Appimages/jetbrains-toolbox
 exec_always --no-startup-id ~/.monitors.sh
 exec --no-startup-id discord
 exec --no-startup-id slack
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec --no-startup-id ~/.config/polybar/i3listen.py
+exec --no-startup-id ~/scripts/spotify/*
+exec "setxkbmap -layout pt"
 
 # start a terminal
-bindsym $super+Return exec alacritty
+bindsym $super+Return exec gnome-terminal
 
 # start dmenu (a program launcher)
 bindsym $super+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Sans:size=8'"
@@ -32,7 +37,6 @@ bindsym $super+Shift+l exec i3lock -i /home/marco/Pictures/Ubuntu.png
 bindsym $super+Shift+w exec firefox
 bindsym $super+shift+c exec /home/marco/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/201.6668.126/bin/clion.sh
 bindsym $super+Shift+f exec thunar;workspace 3;focus
-bindsym $super+Shift+g exec geany
 
 #change volume
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% #increase sound volume
@@ -126,22 +130,26 @@ mode "resize" {
 }
 bindsym $super+r mode "resize"
 
+#Convinience binds
+bindsym $super+Shift+p exec pamac-manager
+bindsym $super+Shift+n exec nautilus
+bindsym $super+Shift+g exec lutris
+
 # panel
-bar {
-        tray_output none
-	colors {
-        background #2f343f
-        statusline #2f343f
-        separator #4b5262
+#bar {
+#	colors {
+#        background #2f343f
+#        statusline #2f343f
+#        separator #4b5262
 
         # colour of border, background, and text
-        focused_workspace       #2f343f #bf616a #d8dee8
-        active_workspace        #2f343f #2f343f #d8dee8
-        inactive_workspace      #2f343f #2f343f #d8dee8
-        urgent_workspacei       #2f343f #ebcb8b #2f343f
-    }
-        status_command i3status
-}
+#        focused_workspace       #2f343f #bf616a #d8dee8
+#        active_workspace        #2f343f #2f343f #d8dee8
+#        inactive_workspace      #2f343f #2f343f #d8dee8
+#        urgent_workspacei       #2f343f #ebcb8b #2f343f
+#    }
+#        status_command i3status
+#}
 
 # window rules, you can find the window class using xprop
 for_window [class=".*"] border pixel 2
@@ -162,3 +170,6 @@ client.unfocused            #2f343f #2f343f #d8dee8 #2f343f #2f343f
 client.urgent               #2f343f #2f343f #d8dee8 #2f343f #2f343f
 client.placeholder          #2f343f #2f343f #d8dee8 #2f343f #2f343f
 client.background           #2f343f
+
+#set window gaps
+gaps inner 6
