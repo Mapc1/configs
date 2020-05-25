@@ -23,6 +23,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id ~/.config/polybar/i3listen.py
 exec --no-startup-id ~/scripts/spotify/*
 exec "setxkbmap -layout pt"
+exec --no-startup-id deadd-notification-center
 
 # start a terminal
 bindsym $super+Return exec gnome-terminal
@@ -36,7 +37,6 @@ bindsym Print exec scrot 'Cheese_%a-%d%b%y_%H.%M.png' -e 'viewnior ~/$f'
 bindsym $super+Shift+l exec i3lock -i /home/marco/Pictures/Ubuntu.png
 bindsym $super+Shift+w exec firefox
 bindsym $super+shift+c exec /home/marco/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/201.6668.126/bin/clion.sh
-bindsym $super+Shift+f exec thunar;workspace 3;focus
 
 #change volume
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% #increase sound volume
@@ -84,7 +84,7 @@ bindsym $super+f fullscreen toggle
 bindsym $super+s layout toggle split
 
 # toggle tiling / floating
-bindsym $super+space floating toggle
+bindsym $super+Shift+f floating toggle
 
 # change focus between tiling / floating windows
 bindsym $super+Shift+space focus mode_toggle
@@ -134,6 +134,7 @@ bindsym $super+r mode "resize"
 bindsym $super+Shift+p exec pamac-manager
 bindsym $super+Shift+n exec nautilus
 bindsym $super+Shift+g exec lutris
+bindsym $super+Shift+s exec steam
 
 # panel
 #bar {
@@ -157,11 +158,12 @@ assign [class=Alacritty] $ws1
 assign [class=firefox|Transmission-gtk] $ws3
 assign [class=Audacity|Vlc|mpv|Ghb|Xfburn|Gimp*|Inkscape|jetbrains-toolbox|jetbrains-clion] $ws2
 assign [class=discord|whatsapp-nativefier-d52542|Slack] $ws4
-assign [class=Lutris|Wine] $ws6
+assign [class=Lutris|Wine|Steam] $ws6
 for_window [class=Viewnior|feh|Audacious|File-roller|Lxappearance|Lxtask|Pavucontrol] floating enable
-for_window [class=URxvt|Firefox|Geany|Evince|Soffice|libreoffice*|mpv|Ghb|Xfburn|Gimp*|Inkscape|Vlc|Lxappearance|Audacity] focus
+for_window [class=URxvt|firefox|Geany|Evince|Soffice|libreoffice*|mpv|Ghb|Xfburn|Gimp*|Inkscape|Vlc|Lxappearance|Audacity] focus
 for_window [class=Xfburn|GParted|System-config-printer.py|Lxtask|Pavucontrol|Exo-helper*|Lxrandr|Arandr] focus
 for_window [class=Spotify] move to workspace $ws5
+for_window [class="Wine"] floating enable, border none, move absolute position center
 
 # colour of border, background, text, indicator, and child_border
 client.focused              #bf616a #2f343f #d8dee8 #bf616a #d8dee8

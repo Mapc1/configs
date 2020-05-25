@@ -144,6 +144,16 @@ alias ....='cd ..; cd ..; cd ..'
 
 alias deb='dpkg -i'
 
+alias sshsc='export TERM=xterm && ssh 004a93283@sc.di.uminho.pt'
+
+alias menu='cd /usr/share/applications && ls'
+
+alias i3='vim ~/.config/i3/config'
+
+alias polybar='vim ~/.config/polybar/config.ini'
+
+alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+
 #git aliases
 alias g='git'
 
