@@ -15,7 +15,8 @@ exec_always --no-startup-id feh --bg-scale ~/Pictures/merda.jpg
 exec --no-startup-id .conky/SimplecOne/start.sh
 exec --no-startup-id spotify
 exec --no-startup-id ~/Appimages/jetbrains-toolbox
-exec_always --no-startup-id ~/.monitors.sh
+#exec_always --no-startup-id ~/.monitors.sh
+exec --no-startup-id 'xrandr --output eDP-1-1 on'
 exec --no-startup-id discord
 exec --no-startup-id slack
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -24,6 +25,7 @@ exec --no-startup-id ~/.config/polybar/i3listen.py
 exec --no-startup-id ~/scripts/spotify/*
 exec "setxkbmap -layout pt"
 exec --no-startup-id deadd-notification-center
+exec --no-startup-id whatsapp-nativefier-dark
 
 # start a terminal
 bindsym $super+Return exec gnome-terminal
