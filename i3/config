@@ -11,12 +11,12 @@ floating_modifier $super
 #autostart
 exec --no-startup-id xsettingsd &
 exec --no-startup-id compton -fb
-exec_always --no-startup-id feh --bg-scale ~/Pictures/merda.jpg
+exec_always --no-startup-id feh --bg-scale ~/Pictures/23.jpg
 exec --no-startup-id .conky/SimplecOne/start.sh
 exec --no-startup-id spotify
 exec --no-startup-id ~/Appimages/jetbrains-toolbox
-#exec_always --no-startup-id ~/.monitors.sh
-exec --no-startup-id 'xrandr --output eDP-1-1 on'
+exec_always --no-startup-id ~/.monitors.sh
+#exec --no-startup-id 'xrandr --output eDP-1-1 on'
 exec --no-startup-id discord
 exec --no-startup-id slack
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -28,7 +28,7 @@ exec --no-startup-id deadd-notification-center
 exec --no-startup-id whatsapp-nativefier-dark
 
 # start a terminal
-bindsym $super+Return exec gnome-terminal
+bindsym $super+Return exec alacritty
 
 # start dmenu (a program launcher)
 bindsym $super+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Sans:size=8'"
@@ -91,7 +91,7 @@ bindsym $super+Shift+f floating toggle
 # change focus between tiling / floating windows
 bindsym $super+Shift+space focus mode_toggle
 
-set $ws1 "1: "
+set $ws1 "1: Terminal"
 set $ws2 "2: "
 set $ws3 "3: "
 set $ws4 "4: "
