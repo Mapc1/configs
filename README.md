@@ -19,4 +19,5 @@ These files are taken from other github repos and changed to fit my preferences.
 - **gpuswitch:** These are simple scripts for gpu switching on fedora (which I don't use anymore).
 - **bashrc:** Bash file with my configs not much to explain here.
 - **vimrc:** Same as bashrc but for vim.
-- **compton:** Just adds blur to alacritty, vscode and clion
+- **compton:** Just adds blur to alacritty, vscode and clion.
+- **monitors.sh** Script to detect if the external monitor is connected and disable the laptop monitor acordingly.
