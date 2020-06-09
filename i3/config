@@ -134,7 +134,7 @@ bindsym $super+r mode "resize"
 
 #Convinience binds
 bindsym $super+Shift+p exec pamac-manager
-bindsym $super+Shift+n exec nautilus
+bindsym $super+Shift+n exec thunar
 bindsym $super+Shift+g exec lutris
 bindsym $super+Shift+s exec steam
 
@@ -156,7 +156,7 @@ bindsym $super+Shift+s exec steam
 
 # window rules, you can find the window class using xprop
 for_window [class=".*"] border pixel 2
-assign [class=Alacritty] $ws1
+#assign [class=Alacritty] $ws1
 assign [class=firefox|Transmission-gtk] $ws3
 assign [class=Audacity|Vlc|mpv|Ghb|Xfburn|Gimp*|Inkscape|jetbrains-toolbox|jetbrains-clion] $ws2
 assign [class=discord|whatsapp-nativefier-d52542|Slack] $ws4
@@ -176,4 +176,5 @@ client.placeholder          #2f343f #2f343f #d8dee8 #2f343f #2f343f
 client.background           #2f343f
 
 #set window gaps
+#smart_gaps on
 gaps inner 6
