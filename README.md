@@ -21,3 +21,20 @@ These files are taken from other github repos and changed to fit my preferences.
 - **vimrc:** Same as bashrc but for vim.
 - **compton:** Just adds blur to alacritty, vscode and clion.
 - **monitors.sh** Script to detect if the external monitor is connected and disable the laptop monitor acordingly.
+
+## Some screenshots:
+
+### Empty workspace:
+[Picture](Screenshots/empty-workspace.png)
+
+### 1 terminal open:
+[Picture](Screenshots/1-term.png)
+
+### 3 terminal open:
+[Picture](Screenshots/3-term.png)
+
+### Code-OSS start:
+[Picture](Screenshots/code-start.png)
+
+### Code-OSS Hello World!!:
+[Picture](Screenshots/code-hello.png)
