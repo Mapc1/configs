@@ -1,5 +1,5 @@
 # Config files for my i3-gaps
-These are my configs for i3-gaps.
+
 These files are taken from other github repos and changed to fit my preferences. 
 
 ## **Note**: I do not take any credit in the making of these files:
