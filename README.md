@@ -25,16 +25,16 @@ These files are taken from other github repos and changed to fit my preferences.
 ## Some screenshots:
 
 ### Empty workspace:
-[Picture](Screenshots/empty-workspace.png)
+![Picture](Screenshots/empty-workspace.png)
 
 ### 1 terminal open:
-[Picture](Screenshots/1-term.png)
+![Picture](Screenshots/1-term.png)
 
 ### 3 terminal open:
-[Picture](Screenshots/3-term.png)
+![Picture](Screenshots/3-term.png)
 
 ### Code-OSS start:
-[Picture](Screenshots/code-start.png)
+![Picture](Screenshots/code-start.png)
 
 ### Code-OSS Hello World!!:
-[Picture](Screenshots/code-hello.png)
+![Picture](Screenshots/code-hello.png)
