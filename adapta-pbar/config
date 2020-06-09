@@ -30,6 +30,11 @@ font-1 = "Iosevka Nerd Font:pixelsize=14;3"
 font-2 = "Iosevka Nerd Font:pixelsize=12;3"
 font-3 = "FontAwesome:pixelsize=12;3"
 cursor-click = pointer
+tray-position = left
+tray-padding = 2
+tray-background = ${colors.bg}
+
+wm-restack = i3
 ;==========================================================
 
 
