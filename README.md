@@ -30,7 +30,7 @@ These files are taken from other github repos and changed to fit my preferences.
 ### 1 terminal open:
 ![Picture](Screenshots/1-term.png)
 
-### 3 terminal open:
+### 3 terminals open:
 ![Picture](Screenshots/3-term.png)
 
 ### Code-OSS start:
