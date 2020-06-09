@@ -254,12 +254,15 @@ bar-volume-foreground-5 = ${colors.adapta-yellow}
 bar-volume-foreground-6 = ${colors.adapta-yellow}
 bar-volume-foreground-7 = ${colors.adapta-red}
 bar-volume-gradient = false
-bar-volume-indicator = 
+bar-volume-indicator = 
+;
 bar-volume-indicator-foreground = ${colors.adapta-lightgreen}
 bar-volume-indicator-font = 2
-bar-volume-fill = ─
+bar-volume-fill = >
+;─
 bar-volume-fill-font = 2
-bar-volume-empty = ─
+bar-volume-empty = >
+;─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.adapta-grey}
 format-muted-margin = ${margin.for-modules}
