@@ -218,7 +218,7 @@ exec = bash ~/.config/polybar/checkupdates.sh
 format-underline = ${colors.adapta-cyan}
 format-padding = 1 
 format-margin = ${margin.for-modules}
-click-left = kitty bash ~/.config/polybar/updates.sh &
+click-left = alacritty -e bash .config/polybar/updates.sh
 interval = 3600
 
 [module/xbacklight]
