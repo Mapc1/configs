@@ -27,6 +27,7 @@ exec "setxkbmap -layout pt"
 exec --no-startup-id deadd-notification-center
 exec --no-startup-id whatsapp-nativefier-dark
 exec --no-startup-id udiskie &
+exec --no-startup-id caprine
 
 # start a terminal
 bindsym $super+Return exec alacritty
@@ -159,11 +160,13 @@ bindsym $super+Shift+s exec steam
 
 # window rules, you can find the window class using xprop
 for_window [class=".*"] border pixel 2
+
 #assign [class=Alacritty] $ws1
 assign [class=firefox|Transmission-gtk] $ws3
 assign [class=Audacity|Vlc|mpv|Ghb|Xfburn|Gimp*|Inkscape|jetbrains-toolbox|jetbrains-clion] $ws2
 assign [class=discord|whatsapp-nativefier-d52542|Slack] $ws4
 assign [class=Lutris|Wine|Steam] $ws6
+assign [class=Caprine] $ws4
 for_window [class=Viewnior|feh|Audacious|File-roller|Lxappearance|Lxtask|Pavucontrol] floating enable
 for_window [class=URxvt|firefox|Geany|Evince|Soffice|libreoffice*|mpv|Ghb|Xfburn|Gimp*|Inkscape|Vlc|Lxappearance|Audacity] focus
 for_window [class=Xfburn|GParted|System-config-printer.py|Lxtask|Pavucontrol|Exo-helper*|Lxrandr|Arandr] focus
