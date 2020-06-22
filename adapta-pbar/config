@@ -5,9 +5,12 @@
 
 ;====General Settings======================================
 [colors]
-bg = #222D32
-fg = #CFD8DC
-adapta-cyan = #00BCD4
+bg = #303030 
+;#222D32
+fg = #CCCCCC
+;#CFD8DC
+adapta-cyan = #94EBEB
+;#00BCD4
 adapta-red = #FF5252
 adapta-yellow = #C9BC0E
 adapta-lightgreen = #4DB6AC
@@ -219,7 +222,7 @@ format-underline = ${colors.adapta-cyan}
 format-padding = 1 
 format-margin = ${margin.for-modules}
 click-left = alacritty -e bash .config/polybar/updates.sh
-interval = 3600
+interval = 300
 
 [module/xbacklight]
 type = internal/xbacklight
@@ -250,18 +253,17 @@ label-muted = 
 label-muted-underline = ${colors.adapta-cyan}
 label-muted-padding = 1
 bar-volume-width = 8
-bar-volume-foreground-0 = ${colors.adapta-lightgreen}
-bar-volume-foreground-1 = ${colors.adapta-lightgreen}
-bar-volume-foreground-2 = ${colors.adapta-lightgreen}
-bar-volume-foreground-3 = ${colors.adapta-lightgreen}
-bar-volume-foreground-4 = ${colors.adapta-lightgreen}
+bar-volume-foreground-0 = ${colors.adapta-cyan}
+bar-volume-foreground-1 = ${colors.adapta-cyan}
+bar-volume-foreground-2 = ${colors.adapta-cyan}
+bar-volume-foreground-3 = ${colors.adapta-cyan}
+bar-volume-foreground-4 = ${colors.adapta-cyan}
 bar-volume-foreground-5 = ${colors.adapta-yellow}
 bar-volume-foreground-6 = ${colors.adapta-yellow}
 bar-volume-foreground-7 = ${colors.adapta-red}
 bar-volume-gradient = false
 bar-volume-indicator = 
 ;
-bar-volume-indicator-foreground = ${colors.adapta-lightgreen}
 bar-volume-indicator-font = 2
 bar-volume-fill = >
 ;─

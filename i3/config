@@ -11,7 +11,7 @@ floating_modifier $super
 #autostart
 exec --no-startup-id xsettingsd &
 exec --no-startup-id compton -fb
-exec_always --no-startup-id feh --bg-scale ~/Pictures/23.jpg
+exec_always --no-startup-id feh --randomize --bg-scale ~/Pictures/Wallpapers/*
 exec --no-startup-id .conky/SimplecOne/start.sh
 exec --no-startup-id spotify
 exec --no-startup-id ~/Appimages/jetbrains-toolbox
