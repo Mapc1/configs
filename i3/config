@@ -29,6 +29,7 @@ exec --no-startup-id whatsapp-nativefier-dark
 exec --no-startup-id udiskie &
 exec --no-startup-id caprine
 exec --no-startup-id nm-applet
+exec --no-startup-id numlockx 
 
 # start a terminal
 bindsym $super+Return exec alacritty

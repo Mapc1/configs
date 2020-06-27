@@ -44,7 +44,7 @@ wm-restack = i3
 
 
 ;====Module settings+======================================
-modules-left = university github youtube workspaces spacer spotify previous playpause next
+modules-left = university github youtube workspaces spacer previous playpause next spotify
 modules-center = date
 modules-right = pkg xbacklight volume wlan cpu-graph memory battery powermenu
 ;==========================================================
@@ -203,7 +203,7 @@ format-font = 2
 ; Default
 hook-0 = echo ""
 ; When spotify active
-hook-1 = echo "玲 "
+hook-1 = echo "| 玲 "
 click-left = "spotifyctl -q previous"
 
 
@@ -238,7 +238,7 @@ hook-0 = echo ""
 ;format-underline = ${colors.adapta-cyan}
 format-padding = 1
 ; Playing/paused show song name and artist
-hook-1 = spotifyctl -q status --format '| %artist%: %title% '
+hook-1 = spotifyctl -q status --format '%artist%: %title% '
 ;==========================================================
 
 
