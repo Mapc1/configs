@@ -19,6 +19,7 @@ Plug 'tsony-tsonev/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 "Icons for Nerd Tree
+Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 
 "Shows file changes for git
@@ -53,6 +54,19 @@ syntax on
 
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : 
                                            \"\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+let g:NERDTreeGitStatusWithFlags = 1
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+    \ }
 
 set noerrorbells 
 
