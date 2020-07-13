@@ -3,6 +3,9 @@ call plug#begin('~/.vim/buttplugs')
 " Vim Nord theme
 Plug 'arcticicestudio/nord-vim'
 
+"VSCode theme
+Plug 'tomasiser/vim-code-dark'
+
 "Conquer of Competion is an autocomplete plug with some aditional features
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -36,11 +39,20 @@ Plug 'tweekmonster/gofmt.vim'
 "Does something for man
 Plug 'vim-utils/vim-man'
 
+"Auto Pairs brackets and parenthesies
+Plug 'jiangmiao/auto-pairs'
+
+"Vim pretier
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+
 call plug#end()
 
-colorscheme nord
+colorscheme codedark
 
 syntax on
+
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : 
+                                           \"\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 set noerrorbells 
 
