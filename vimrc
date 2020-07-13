@@ -1,8 +1,5 @@
 call plug#begin('~/.vim/buttplugs')
 
-" Vim Nord theme
-Plug 'arcticicestudio/nord-vim'
-
 "VSCode theme
 Plug 'tomasiser/vim-code-dark'
 
@@ -19,7 +16,6 @@ Plug 'tsony-tsonev/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 "Icons for Nerd Tree
-Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 
 "Shows file changes for git
@@ -50,10 +46,7 @@ call plug#end()
 
 colorscheme codedark
 
-syntax on
-
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : 
-                                           \"\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+"NerdTree settings
 let g:NERDTreeGitStatusWithFlags = 1
 let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "✹",
@@ -67,6 +60,11 @@ let g:NERDTreeIndicatorMapCustom = {
     \ 'Ignored'   : '☒',
     \ "Unknown"   : "?"
     \ }
+autocmd vimenter * NERDTree
+map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+syntax on
 
 set noerrorbells 
 
