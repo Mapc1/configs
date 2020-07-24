@@ -14,12 +14,12 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20; # decrease screen brightn
 
 #autostart
 exec --no-startup-id xsettingsd &
-exec --no-startup-id compton -fb
-exec_always --no-startup-id feh --randomize --bg-scale ~/Pictures/Wallpapers/*
+exec --no-startup-id picom --experimental-backends -fb
+exec_always --no-startup-id feh --randomize --bg-scale --scale-down ~/Pictures/Wallpapers/*
 exec --no-startup-id .conky/SimplecOne/start.sh
 exec --no-startup-id spotify
 exec --no-startup-id ~/Appimages/jetbrains-toolbox
-exec_always --no-startup-id ~/.monitors.sh
+exec_always --no-startup-id ~/Scripts/monitors.sh
 #exec --no-startup-id 'xrandr --output eDP-1-1 on'
 exec --no-startup-id discord
 exec --no-startup-id slack
@@ -48,15 +48,17 @@ bindsym $super+Shift+w exec chromium
 bindsym $super+shift+c exec /home/marco/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/201.6668.126/bin/clion.sh
 
 #change volume
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
-
+#bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% #increase sound volume
+#bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% #decrease sound volume
+#bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
+bindsym XF86AudioLowerVolume exec amixer set Master 5%-
+bindsym XF86AudioMute exec amixer set Master toggle
 #Screenshot
 bindsym Print exec flameshot full -p ~/Pictures/Screenshots/
 
 #Change Wallpaper
-bindsym $super+w exec feh --randomize --bg-scale ~/Pictures/Wallpapers/*
+bindsym $super+w exec feh --randomize --bg-scale --scale-down ~/Pictures/Wallpapers/*
 
 # music control
 bindsym XF86AudioNext exec mpc next
