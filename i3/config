@@ -48,12 +48,12 @@ bindsym $super+Shift+w exec chromium
 bindsym $super+shift+c exec /home/marco/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/201.6668.126/bin/clion.sh
 
 #change volume
-#bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% #increase sound volume
-#bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% #decrease sound volume
-#bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
-bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
-bindsym XF86AudioLowerVolume exec amixer set Master 5%-
-bindsym XF86AudioMute exec amixer set Master toggle
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
+#bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
+#bindsym XF86AudioLowerVolume exec amixer set Master 5%-
+#bindsym XF86AudioMute exec amixer set Master toggle
 #Screenshot
 bindsym Print exec flameshot full -p ~/Pictures/Screenshots/
 
@@ -149,7 +149,7 @@ bindsym $super+r mode "resize"
 
 #Convinience binds
 bindsym $super+Shift+p exec pamac-manager
-bindsym $super+Shift+n exec thunar
+bindsym $super+Shift+n exec pcmanfm
 bindsym $super+Shift+g exec lutris
 bindsym $super+Shift+s exec steam
 

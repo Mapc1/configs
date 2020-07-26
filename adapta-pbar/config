@@ -44,9 +44,9 @@ wm-restack = i3
 
 
 ;====Module settings+======================================
-modules-left = university github youtube workspaces spacer previous playpause next spotify
+modules-left = university github youtube spacer previous playpause next spotify
 modules-center = date
-modules-right = pkg xbacklight volume wlan cpu-graph memory battery powermenu
+modules-right = pkg volume wlan cpu-graph memory battery powermenu
 ;==========================================================
 
 
@@ -60,94 +60,6 @@ content-foreground = ${colors.fg}
 content-underline = ${colors.adapta-cyan}
 ;click-left = rmenu_1
 ;click-right = rmenu_wi_1
-
-[module/apple]
-type = custom/text
-content = 
-content-padding = 1
-content-foreground = ${colors.fg}
-content-underline = ${colors.adapta-cyan}
-;click-left = rmenu_1
-;click-right = rmenu_wi_1
-
-[module/windows]
-type = custom/text
-content = 
-content-padding = 1
-content-foreground = ${colors.fg}
-content-underline = ${colors.adapta-cyan}
-;click-left = rmenu_1#
-;click-right = rmenu_wi_1
-
-#[module/workspaces-xmonad]
-#type = custom/script
-#exec = tail -F /tmp/.xmonad-workspace-log
-#exec-if = [ -p /tmp/.xmonad-workspace-log ]
-#tail = true
-#format-underline = ${colors.adapta-cyan}
-#format-padding = 1
-#;format-margin = ${margin.for-modules}
-
-[module/workspaces]
-type = internal/xworkspaces
-pin-workspaces = false
-enable-click = true
-enable-scroll = true
-format-padding = 1
-icon-0 = 1;
-icon-1 = 2;
-icon-2 = 3;❸
-icon-3 = 4;❹
-icon-4 = 5;❺
-icon-5 = 6;❻
-icon-6 = 7;❼
-;icon-7 = 8;❽
-;icon-8 = 9;❾
-;icon-9 = 10;❿
-icon-default = ola
-format = <label> <bar>
-;format-background = ${colors.shade2}
-label-active = 
-label-occupied = 
-label-urgent = 
-label-empty = 
-label-empty-padding = 1
-label-active-padding = 1
-label-urgent-padding = 1
-label-occupied-padding = 1
-label-empty-foreground = ${colors.fg}
-;label-active-foreground = ${colors.}
-;label-urgent-foreground = ${colors.}
-;label-occupied-foreground = ${colors.}
-
-[module/explorer]
-type = custom/text
-;content = 
-content = 
-content-padding = 1
-content-margin = 1
-content-foreground = ${colors.fg}
-content-underline = ${colors.adapta-cyan}
-click-left = nautilus &
-
-#[module/google]
-#type = custom/text
-#content = 
-#content-padding = 1
-#;content-margin = 1
-#content-foreground = ${colors.fg}
-#content-underline = ${colors.adapta-cyan}
-#click-left = xdg-open https://www.google.com/ &
-
-#[module/amazon]
-#type = custom/text
-#content = 
-#content-padding = 1
-#content-margin = 1
-#content-foreground = ${colors.fg}
-#content-underline = ${colors.adapta-cyan}
-#click-left = xdg-open https://www.amazon.co.jp/ &
-#;click-left = xdg-open https://www.amazon.com/
 
 [module/github]
 type = custom/text
@@ -167,15 +79,6 @@ click-left = xdg-open https://www.github.com/ &
 #content-foreground = ${colors.fg}
 #content-underline = ${colors.adapta-cyan}
 #click-left = xdg-open https://www.reddit.com/ &
-
-#[module/facebook]
-#type = custom/text
-#content = 
-#content-padding = 1
-#;content-margin = 1
-#content-foreground = ${colors.fg}
-#content-underline = ${colors.adapta-cyan}
-#click-left = xdg-open https://www.facebook.com/ &
 
 [module/youtube]
 type = custom/text
@@ -267,25 +170,6 @@ format-padding = 1
 format-margin = ${margin.for-modules}
 click-left = alacritty -e bash .config/polybar/updates.sh
 interval = 300
-
-[module/xbacklight]
-type = internal/xbacklight
-format = <label-status>
-format-underline = ${colors.adapta-cyan}
-format-padding = 1
-label = 
-bar-width = 8
-bar-indicator = 
-bar-indicator-foreground = ${colors.adapta-lightgreen}
-bar-indicator-font = 2
-bar-fill = ─
-bar-fill-font = 2
-bar-fill-foreground = ${colors.adapta-lightgreen}
-bar-empty = ─
-bar-empty-font = 2
-bar-empty-foreground = ${colors.adapta-grey}
-format-margin = ${margin.for-modules}
-
 
 [module/volume]
 type = internal/alsa
