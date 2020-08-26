@@ -10,6 +10,32 @@ neofetch
 
 autoload -U promptinit; promptinit
 prompt spaceship
+
+ex ()
+{
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tbz2)     tar xjf $1  ;;
+            *.tar.bz2)  tar xjf $1  ;;
+            *.tar)      tar xzf $1  ;;
+            *.tar.gz)   tar xzf $1  ;;
+            *.tgz)      tar xzf $1  ;;
+            *.tar.xz)   tar xf  $1  ;;
+            *.gz)       tar xf  $1  ;;
+            *.tar.zst)  unzstd  $1  ;;
+            *.bz2)      bunzip  $1  ;;
+            *.rar)      unrar -x  $1  ;;
+            *.zip)      unzip   $1  ;;
+            *.Z)        uncompress $1   ;;
+            *.7z)       7z  x   $1  ;;
+            *.deb)      ar  x   $1  ;;
+            *)          echo    "'$1' cannot be extracted via ex()" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
+}
+
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/marco/.zshrc'

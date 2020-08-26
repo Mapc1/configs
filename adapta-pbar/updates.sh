@@ -1,9 +1,9 @@
 #!/bin/bash
 
-echo
-echo 'updates.sh: "pacman -Syu"'
-echo
-sudo pacman -Syu
+#echo
+#echo 'updates.sh: "pacman -Syu"'
+#echo
+#sudo pacman -Syu
 
 echo
 echo 'updates.sh: "yay -Syu"'
