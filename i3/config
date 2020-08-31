@@ -3,7 +3,7 @@ set $super Mod4
 set $alt Mod1
 
 # set font
-font pango: Noto Sans 8
+font pango: Ubuntu Normal 8
 
 # Use Mouse+$super to drag floating windows to their wanted position
 floating_modifier $super
@@ -12,80 +12,40 @@ floating_modifier $super
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20; # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20; # decrease screen brightness
 
-#autostart
-exec --no-startup-id xsettingsd &
-exec --no-startup-id picom --experimental-backends -fb
-exec_always --no-startup-id feh --randomize --bg-scale --scale-down ~/Pictures/Wallpapers/*
-exec --no-startup-id .conky/SimplecOne/start.sh
-exec --no-startup-id spotify
-exec --no-startup-id ~/Appimages/jetbrains-toolbox
-exec_always --no-startup-id ~/Scripts/monitors.sh
-#exec --no-startup-id 'xrandr --output eDP-1-1 on'
-exec --no-startup-id discord
-exec --no-startup-id slack
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec_always --no-startup-id ~/.config/polybar/launch.sh
-exec --no-startup-id ~/.config/polybar/i3listen.py
-exec --no-startup-id ~/scripts/spotify/*
-exec "setxkbmap -layout pt"
-exec --no-startup-id deadd-notification-center
-exec --no-startup-id whatsapp-nativefier-dark
-exec --no-startup-id udiskie &
-exec --no-startup-id caprine
-exec --no-startup-id nm-applet
-exec --no-startup-id numlockx 
-exec --no-startup-id clight
-
 # start a terminal
 bindsym $super+Return exec alacritty
 
 # start rofi (a program launcher)
-bindsym $super+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Noto Sans 8'
+bindsym $super+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -modi drun -columns 1 -font 'Ubuntu Bold 13' -show-icons
 
 # common apps keybinds
-bindsym $super+Shift+l exec i3lock -i /home/marco/Pictures/Ubuntu.png
-bindsym $super+Shift+w exec firefox
-bindsym $super+shift+c exec /home/marco/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/201.6668.126/bin/clion.sh
+bindsym $super+Shift+w exec chromium
+bindsym $super+shift+c exec vscodium
 
 #change volume
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
-#bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
-#bindsym XF86AudioLowerVolume exec amixer set Master 5%-
-#bindsym XF86AudioMute exec amixer set Master toggle
+
 #Screenshot
 bindsym Print exec flameshot full -p ~/Pictures/Screenshots/
 
 #Change Wallpaper
-bindsym $super+w exec feh --randomize --bg-scale --scale-down ~/Pictures/Wallpapers/*
-
-# music control
-bindsym XF86AudioNext exec mpc next
-bindsym XF86AudioPrev exec mpc prev
-bindsym XF86AudioPlay exec mpc toggle
-bindsym XF86AudioStop exec mpc stop
+bindsym $super+w exec ./~/Scripts/change-background.sh
 
 # kill focused window
 bindsym $super+c kill
-bindsym $alt+F4 kill
 
 # change focus
-bindsym $super+Left focus left
-bindsym $super+Down focus down
 bindsym $super+Up focus up
+bindsym $super+Down focus down
+bindsym $super+Left focus left
 bindsym $super+Right focus right
 
-#Alternative focus
-bindsym $super+j focus left
-bindsym $super+k focus down
-bindsym $super+i focus up
-bindsym $super+l focus right
-
 # move focused window
-bindsym $super+Shift+Left move left
-bindsym $super+Shift+Down move down
 bindsym $super+Shift+Up move up
+bindsym $super+Shift+Down move down
+bindsym $super+Shift+Left move left
 bindsym $super+Shift+Right move right
 
 # split in horizontal orientation
@@ -139,9 +99,9 @@ bindsym $super+q exec "i3-nagbar -t warning -m 'Really, exit?' -b 'Yes' 'i3-msg 
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        bindsym Left resize shrink width 5 px or 5 ppt
-        bindsym Down resize grow height 5 px or 5 ppt
         bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Down resize grow height 5 px or 5 ppt
+        bindsym Left resize shrink width 5 px or 5 ppt
         bindsym Right resize grow width 5 px or 5 ppt
         bindsym Return mode "default"
 }
@@ -152,22 +112,6 @@ bindsym $super+Shift+p exec pamac-manager
 bindsym $super+Shift+n exec pcmanfm
 bindsym $super+Shift+g exec lutris
 bindsym $super+Shift+s exec steam
-
-# panel
-#bar {
-#	colors {
-#        background #2f343f
-#        statusline #2f343f
-#        separator #4b5262
-
-        # colour of border, background, and text
-#        focused_workspace       #2f343f #bf616a #d8dee8
-#        active_workspace        #2f343f #2f343f #d8dee8
-#        inactive_workspace      #2f343f #2f343f #d8dee8
-#        urgent_workspacei       #2f343f #ebcb8b #2f343f
-#    }
-#        status_command i3status
-#}
 
 # window rules, you can find the window class using xprop
 for_window [class=".*"] border pixel 2
@@ -191,6 +135,4 @@ client.urgent               #2f343f #2f343f #d8dee8 #2f343f #2f343f
 client.placeholder          #2f343f #2f343f #d8dee8 #2f343f #2f343f
 client.background           #2f343f
 
-#set window gaps
-#smart_gaps on
-gaps inner 6
+gaps inner 4

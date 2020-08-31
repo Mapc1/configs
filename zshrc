@@ -24,7 +24,7 @@ ex ()
             *.gz)       tar xf  $1  ;;
             *.tar.zst)  unzstd  $1  ;;
             *.bz2)      bunzip  $1  ;;
-            *.rar)      unrar -x  $1  ;;
+            *.rar)      unrar x  $1  ;;
             *.zip)      unzip   $1  ;;
             *.Z)        uncompress $1   ;;
             *.7z)       7z  x   $1  ;;
@@ -66,6 +66,8 @@ alias gpll='git pull'
 alias gsth='git stash'
 
 ulimit -c unlimited
+
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
 
 autoload -Uz compinit
 compinit
