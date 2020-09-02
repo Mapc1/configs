@@ -31,7 +31,7 @@ bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
 bindsym Print exec flameshot full -p ~/Pictures/Screenshots/
 
 #Change Wallpaper
-bindsym $super+w exec ./~/Scripts/change-background.sh
+bindsym $super+w exec ~/Scripts/change-background.sh
 
 # kill focused window
 bindsym $super+c kill
@@ -112,6 +112,17 @@ bindsym $super+Shift+p exec pamac-manager
 bindsym $super+Shift+n exec pcmanfm
 bindsym $super+Shift+g exec lutris
 bindsym $super+Shift+s exec steam
+
+exec --no-startup-id ~/Scripts/background.sh
+exec --no-startup-id udiskie
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id deadd-notification-center
+exec --no-startup-id xsettingsd
+exec --no-startup-id nm-applet
+exec_always --no-startup-id picom --experimental-backends -fb
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id ~/Scripts/monitors.sh
+exec --no-startup-id setxkbmap pt
 
 # window rules, you can find the window class using xprop
 for_window [class=".*"] border pixel 2
