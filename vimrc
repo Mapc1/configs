@@ -9,14 +9,17 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Nerd tree for file searching
 Plug 'scrooloose/nerdtree'
 
-"Git integration for Nerd Tree
-Plug 'tsony-tsonev/nerdtree-git-plugin'
-
-"Sintax highliting for Nerd Tree
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
-"Icons for Nerd Tree
-Plug 'ryanoasis/vim-devicons'
+"-----------------------------------------------
+"Git integration for Nerd Tree                 |
+"Plug 'tsony-tsonev/nerdtree-git-plugin'       |
+"                                              |
+"Sintax highliting for Nerd Tree               | For some reason comenting these lines clears errors
+"                                              |
+"Plug 'tiagofumo/vim-nerdtree-syntax-highlight'|
+"                                              |
+"Icons for Nerd Tree                           |
+"Plug 'ryanoasis/vim-devicons'                 |
+"-----------------------------------------------
 
 "Shows file changes for git
 Plug 'airblade/vim-gitgutter'

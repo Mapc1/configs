@@ -117,7 +117,6 @@ exec --no-startup-id ~/Scripts/background.sh
 exec --no-startup-id udiskie
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id deadd-notification-center
-exec --no-startup-id xsettingsd
 exec --no-startup-id nm-applet
 exec_always --no-startup-id picom --experimental-backends -fb
 exec_always --no-startup-id ~/.config/polybar/launch.sh
