@@ -19,7 +19,7 @@ bindsym $super+Return exec alacritty
 bindsym $super+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -modi drun -columns 1 -font 'Ubuntu Bold 13' -show-icons
 
 # common apps keybinds
-bindsym $super+Shift+w exec chromium
+bindsym $super+Shift+w exec firefox
 bindsym $super+shift+c exec vscodium
 
 #change volume
@@ -109,7 +109,7 @@ bindsym $super+r mode "resize"
 
 #Convinience binds
 bindsym $super+Shift+p exec pamac-manager
-bindsym $super+Shift+n exec pcmanfm
+bindsym $super+Shift+n exec thunar
 bindsym $super+Shift+g exec lutris
 bindsym $super+Shift+s exec steam
 
