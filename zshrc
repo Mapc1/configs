@@ -1,3 +1,5 @@
+source ~/.zplug/init.zsh
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -6,10 +8,11 @@ setopt autocd beep nomatch
 unsetopt extendedglob
 bindkey -v
 
-neofetch
+export FZF_DEFAULT_COMMAND='fdfind --type f --hidden --follow --exclude .git --exclude .vim'
 
-autoload -U promptinit; promptinit
-prompt spaceship
+zplug "denysdovhan/spaceship-zsh-theme", use:spaceship.zsh, from:github, as:theme
+
+neofetch
 
 ex ()
 {
@@ -67,8 +70,8 @@ alias gsth='git stash'
 
 ulimit -c unlimited
 
-[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
-
 autoload -Uz compinit
 compinit
+
+zplug load --verbose
 # End of lines added by compinstall
