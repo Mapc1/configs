@@ -37,6 +37,7 @@ cursor-click = pointer
 tray-position = left
 tray-padding = 2
 tray-background = ${colors.bg}
+monitor = ${env:MONITOR:}
 
 wm-restack = i3
 ;==========================================================

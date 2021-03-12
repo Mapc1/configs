@@ -175,4 +175,8 @@ alias gsth='git stash'
 
 alias active_driver="glxinfo |egrep 'OpenGL vendor|OpenGL renderer'"
 
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
+
 ulimit -c unlimited
