@@ -22,7 +22,7 @@ bindsym $super+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show dru
 
 # common apps keybinds
 bindsym $super+Shift+w exec firefox
-bindsym $super+shift+c exec vscodium
+bindsym $super+shift+c exec code
 
 #change volume
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% #increase sound volume
