@@ -13,10 +13,10 @@ set tabstop=4
 set shiftwidth=4
 set smarttab
 set expandtab
-set cmdheight=2
+"set cmdheight=2
 set smartindent
 set autoindent
-set laststatus=0
+set laststatus=2
 set number
 set cursorline
 set background=dark
@@ -70,9 +70,25 @@ Plug 'preservim/nerdtree'                         |
 Plug 'preservim/tagbar'
 Plug 'dyng/ctrlsf.vim'
 Plug 'derekwyatt/vim-fswitch'
-Plug 'ycm-core/YouCompleteMe'
+Plug 'codota/tabnine-vim'
+Plug 'itchyny/lightline.vim'
+Plug 'joshdick/onedark.vim'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
+"Neovim theme
+colorscheme onedark
+"Lightline theme
+let g:lightline = {
+      \ 'colorscheme': 'onedark',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'readonly', 'gitbranch', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
 " Tagbar keybind
 nmap <F8> :TagbarToggle<CR>
 
