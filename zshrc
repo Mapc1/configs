@@ -1,5 +1,3 @@
-source ~/.zplug/init.zsh
-
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -10,7 +8,8 @@ bindkey -v
 
 export FZF_DEFAULT_COMMAND='fdfind --type f --hidden --follow --exclude .git --exclude .vim'
 
-zplug "denysdovhan/spaceship-zsh-theme", use:spaceship.zsh, from:github, as:theme
+autoload -U promptinit; promptinit
+prompt spaceship
 
 neofetch
 
@@ -73,5 +72,4 @@ ulimit -c unlimited
 autoload -Uz compinit
 compinit
 
-zplug load --verbose
 # End of lines added by compinstall
